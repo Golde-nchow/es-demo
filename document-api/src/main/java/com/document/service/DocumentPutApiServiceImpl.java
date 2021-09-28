@@ -26,7 +26,7 @@ public class DocumentPutApiServiceImpl extends DocumentApiBaseServiceImpl {
      */
     public String addJsonString(String contentJson) {
         IndexRequest indexRequest = EsIndexRequestUtils.buildIndexRequestWithString(
-                "cjz", "cjz-" + UUID.randomUUID().toString(), contentJson
+                "cjz", "cjz-1", contentJson
         );
         IndexResponse response;
         try {
