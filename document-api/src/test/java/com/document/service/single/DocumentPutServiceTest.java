@@ -1,4 +1,4 @@
-package com.document.service;
+package com.document.service.single;
 
 import com.alibaba.fastjson.JSON;
 import com.document.BaseTest;

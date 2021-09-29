@@ -1,7 +1,6 @@
-package com.document.service;
+package com.document.service.single;
 
 import com.document.BaseTest;
-import com.document.service.single.DocumentGetApiServiceImpl;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.junit.jupiter.api.Test;

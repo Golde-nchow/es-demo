@@ -1,9 +1,8 @@
-package com.document.service;
+package com.document.service.single;
 
 import com.alibaba.fastjson.JSON;
 import com.document.BaseTest;
 import com.document.entity.Document;
-import com.document.service.single.DocumentUpdateApiServiceImpl;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.junit.jupiter.api.Test;
