@@ -3,6 +3,7 @@ package com.document.service;
 import com.alibaba.fastjson.JSON;
 import com.document.BaseTest;
 import com.document.entity.Document;
+import com.document.service.single.DocumentPutApiServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

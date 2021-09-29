@@ -1,5 +1,6 @@
-package com.document.service;
+package com.document.service.single;
 
+import com.document.service.DocumentApiBaseServiceImpl;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.search.fetch.subphase.FetchSourceContext;

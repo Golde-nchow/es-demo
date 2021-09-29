@@ -1,6 +1,7 @@
 package com.document.service;
 
 import com.document.BaseTest;
+import com.document.service.single.DocumentCheckExistApiServiceImpl;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,7 @@
-package com.document.service;
+package com.document.service.single;
 
 import com.document.entity.Document;
+import com.document.service.DocumentApiBaseServiceImpl;
 import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RequestOptions;

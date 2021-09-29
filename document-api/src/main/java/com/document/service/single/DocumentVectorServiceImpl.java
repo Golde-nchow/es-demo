@@ -1,5 +1,6 @@
-package com.document.service;
+package com.document.service.single;
 
+import com.document.service.DocumentApiBaseServiceImpl;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.core.TermVectorsRequest;
 import org.elasticsearch.client.core.TermVectorsResponse;

@@ -1,5 +1,6 @@
-package com.document.service;
+package com.document.service.single;
 
+import com.document.service.DocumentApiBaseServiceImpl;
 import com.document.util.EsIndexRequestUtils;
 import com.document.util.EsIndexResponseUtils;
 import joptsimple.internal.Strings;
