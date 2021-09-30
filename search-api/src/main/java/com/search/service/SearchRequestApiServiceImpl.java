@@ -1,6 +1,5 @@
 package com.search.service;
 
-import com.search.SearchApiBaseServiceImpl;
 import joptsimple.internal.Strings;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -56,6 +55,7 @@ public class SearchRequestApiServiceImpl extends SearchApiBaseServiceImpl {
 
         try {
             SearchResponse searchResponse = client.search(searchRequest, RequestOptions.DEFAULT);
+            return searchResponse.toString();
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.search;
+package com.search.service;
 
 import com.es.factory.ConnectionFactory;
 import org.elasticsearch.client.RestHighLevelClient;
