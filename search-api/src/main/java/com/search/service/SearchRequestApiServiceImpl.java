@@ -75,7 +75,7 @@ public class SearchRequestApiServiceImpl extends SearchApiBaseServiceImpl {
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 
         // 匹配参数，检索 content 字段，值为：xx
-        MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("content", "查询");
+        MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("content", "因此");
 
         // 开启模糊搜索
         matchQueryBuilder.fuzziness(Fuzziness.AUTO);
@@ -90,7 +90,7 @@ public class SearchRequestApiServiceImpl extends SearchApiBaseServiceImpl {
         searchSourceBuilder.query(matchQueryBuilder);
 
         // 排序参数
-        FieldSortBuilder fieldSortBuilder = new FieldSortBuilder("_createTime").order(SortOrder.DESC);
+        FieldSortBuilder fieldSortBuilder = new FieldSortBuilder("createTime").unmappedType("date").order(SortOrder.DESC);
         searchSourceBuilder.sort(fieldSortBuilder);
 
         // 是否每次都返回，都命中 stored 的值
@@ -112,12 +112,12 @@ public class SearchRequestApiServiceImpl extends SearchApiBaseServiceImpl {
 
         // 请求聚合（统计）
         AggregationBuilder aggregationBuilder = AggregationBuilders.terms("content").field("content.keyword");
-        aggregationBuilder.subAggregation(AggregationBuilders.count("content_count").field("content"));
+        aggregationBuilder.subAggregation(AggregationBuilders.count("content_count").field("content.keyword"));
         searchSourceBuilder.aggregation(aggregationBuilder);
 
         // 建议请求
         SuggestBuilder suggestBuilder = new SuggestBuilder();
-        SuggestionBuilder suggestionBuilder = SuggestBuilders.termSuggestion("content").text("xx");
+        SuggestionBuilder suggestionBuilder = SuggestBuilders.termSuggestion("content").text("因此");
         // 添加生成器
         suggestBuilder.addSuggestion("content_suggestion", suggestionBuilder);
         searchSourceBuilder.suggest(suggestBuilder);

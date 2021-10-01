@@ -16,7 +16,7 @@ public class SearchRequestApiServiceTest extends BaseTest {
 
     @Test
     public void testSimpleSearch() {
-        searchRequestApiService.buildSearchRequest();
+        log.info(searchRequestApiService.buildSearchRequest());
     }
 
 }

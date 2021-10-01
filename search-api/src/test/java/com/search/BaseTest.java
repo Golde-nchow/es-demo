@@ -1,5 +1,7 @@
 package com.search;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -9,5 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest(classes = SearchApiApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class BaseTest {
+
+    protected Log log = LogFactory.getLog(BaseTest.class);
 
 }
